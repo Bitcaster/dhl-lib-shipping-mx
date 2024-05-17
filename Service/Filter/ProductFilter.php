@@ -69,6 +69,12 @@ class ProductFilter implements FilterInterface
             PreferredDay::CODE,
             PreferredTime::CODE,
         ],
+        ShippingProducts::CODE_WARENPOST_NATIONAL   => [
+            ParcelAnnouncement::CODE,
+            PreferredLocation::CODE,
+            PreferredNeighbour::CODE,
+            PrintOnlyIfCodeable::CODE,
+        ],
         ShippingProducts::CODE_CONNECT             => [
             BulkyGoods::CODE,
             Insurance::CODE,
@@ -79,6 +85,10 @@ class ProductFilter implements FilterInterface
         ShippingProducts::CODE_INTERNATIONAL       => [
             BulkyGoods::CODE,
             Insurance::CODE,
+            ParcelAnnouncement::CODE,
+            PrintOnlyIfCodeable::CODE,
+        ],
+        ShippingProducts::CODE_WARENPOST_INTERNATIONAL   => [
             ParcelAnnouncement::CODE,
             PrintOnlyIfCodeable::CODE,
         ],

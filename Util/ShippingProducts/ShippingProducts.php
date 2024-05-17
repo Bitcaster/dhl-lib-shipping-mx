@@ -47,12 +47,15 @@ class ShippingProducts implements BcsShippingProductsInterface, GlShippingProduc
             'DE' => [
                 RoutesInterface::COUNTRY_CODE_GERMANY => [
                     self::CODE_NATIONAL,
+                    self::CODE_WARENPOST_NATIONAL
                 ],
                 RoutesInterface::REGION_EU            => [
                     self::CODE_INTERNATIONAL,
+                    self::CODE_WARENPOST_INTERNATIONAL,
                 ],
                 RoutesInterface::REGION_INTERNATIONAL => [
                     self::CODE_INTERNATIONAL,
+                    self::CODE_WARENPOST_INTERNATIONAL,
                 ],
             ],
             'AT' => [
@@ -82,9 +85,11 @@ class ShippingProducts implements BcsShippingProductsInterface, GlShippingProduc
                 ],
                 RoutesInterface::REGION_EU                   => [
                     self::CODE_PAKET_INTERNATIONAL,
+                    self::CODE_WARENPOST_INTERNATIONAL
                 ],
                 RoutesInterface::REGION_INTERNATIONAL        => [
                     self::CODE_PAKET_INTERNATIONAL,
+                    self::CODE_WARENPOST_INTERNATIONAL
                 ],
             ],
             'US' => [
@@ -280,8 +285,10 @@ class ShippingProducts implements BcsShippingProductsInterface, GlShippingProduc
     {
         $names = [
             self::CODE_NATIONAL            => 'DHL Paket',
+            self::CODE_WARENPOST_NATIONAL  => 'DHL Warenpost National',
             self::CODE_CONNECT             => 'DHL Paket Connect',
             self::CODE_INTERNATIONAL       => 'DHL Paket International',
+            self::CODE_WARENPOST_INTERNATIONAL  => 'DHL Warenpost International',
             self::CODE_PAKET_AUSTRIA       => 'DHL PAKET Austria',
             self::CODE_PAKET_CONNECT       => 'DHL PAKET Connect',
             self::CODE_PAKET_INTERNATIONAL => 'DHL PAKET International',
@@ -427,8 +434,10 @@ class ShippingProducts implements BcsShippingProductsInterface, GlShippingProduc
     {
         $procedures = [
             self::CODE_NATIONAL            => self::PROCEDURE_NATIONAL,
+            self::CODE_WARENPOST_NATIONAL  => self::PROCEDURE_WARENPOST_NATIONAL,
             self::CODE_CONNECT             => self::PROCEDURE_CONNECT,
             self::CODE_INTERNATIONAL       => self::PROCEDURE_INTERNATIONAL,
+            self::CODE_WARENPOST_INTERNATIONAL => self::PROCEDURE_WARENPOST_INTERNATIONAL,
             self::CODE_EUROPAKET           => self::PROCEDURE_EUROPAKET,
             self::CODE_KURIER_TAGGLEICH    => self::PROCEDURE_KURIER_TAGGLEICH,
             self::CODE_KURIER_WUNSCHZEIT   => self::PROCEDURE_KURIER_WUNSCHZEIT,
@@ -455,6 +464,7 @@ class ShippingProducts implements BcsShippingProductsInterface, GlShippingProduc
     {
         $procedures = [
             self::CODE_NATIONAL      => self::PROCEDURE_RETURNSHIPMENT_NATIONAL,
+            self::CODE_WARENPOST_NATIONAL => self::PROCEDURE_RETURNSHIPMENT_NATIONAL,
             self::CODE_PAKET_AUSTRIA => self::PROCEDURE_RETURNSHIPMENT_AUSTRIA,
             self::CODE_PAKET_CONNECT => self::PROCEDURE_RETURNSHIPMENT_CONNECT,
         ];

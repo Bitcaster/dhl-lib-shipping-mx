@@ -35,7 +35,9 @@ namespace Dhl\Shipping\Util\ShippingProducts;
 interface BcsShippingProductsInterface extends ShippingProductsInterface
 {
     const CODE_NATIONAL            = 'V01PAK';
+    const CODE_WARENPOST_NATIONAL  = 'V62WP';
     const CODE_INTERNATIONAL       = 'V53WPAK';
+    const CODE_WARENPOST_INTERNATIONAL = 'V66WPI';
     const CODE_EUROPAKET           = 'V54EPAK';
     const CODE_CONNECT             = 'V55PAK';
     const CODE_KURIER_TAGGLEICH    = 'V06TG';
@@ -45,7 +47,9 @@ interface BcsShippingProductsInterface extends ShippingProductsInterface
     const CODE_PAKET_INTERNATIONAL = 'V82PARCEL';
 
     const PROCEDURE_NATIONAL                = '01';
+    const PROCEDURE_WARENPOST_NATIONAL      = '62';
     const PROCEDURE_INTERNATIONAL           = '53';
+    const PROCEDURE_WARENPOST_INTERNATIONAL = '66';
     const PROCEDURE_EUROPAKET               = '54';
     const PROCEDURE_CONNECT                 = '55';
     const PROCEDURE_KURIER_TAGGLEICH        = '01';
